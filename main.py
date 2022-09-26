@@ -1,22 +1,32 @@
 # Create a dictionary called `person`, it has three properties, `name` which is a string, `age` which is an integer, `hobbies` which is a list of strings.
+from unittest.mock import AsyncMagicMixin
 
+
+person = {
+    "name": "Amani",
+    "age": 35,
+    "hobbies": ["cooking", "reading"]
+
+}
 
 # Create a function called `change_age` which takes the `person` dictionary and a `number` as arguments, this function changes the age in the dictionary to the `number`. The return value of this function is the updated dictionary.
 
 
 def change_age(person, number):
-    ...
+    person["age"]=number
+    return person
 
 
 print(change_age(person, 21))
 
-
+print(person)
 # Create a function called `add_hobby` which takes the `person` dictionary and a `hobby` as arguments. This function adds the hobby to the list of `hobbies` inside the person dictionary. The function will return the updated dictionary.
-
+ 
 
 def add_hobby(person, hobby):
-    ...
 
+    person["hobbies"].append(hobby)
+    return person
 
 print(add_hobby(person, "Table Tennis"))
 
